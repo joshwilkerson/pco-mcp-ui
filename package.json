@@ -2,7 +2,13 @@
   "name": "mcp-ui",
   "version": "0.0.1",
   "description": "Planning Center MCP Authorization UI",
+  "scripts": {
+    "start": "npx serve . -p 3000"
+  },
   "dependencies": {
     "@planningcenter/tapestry": "^2.6.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
   }
 }
