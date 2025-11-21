@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planning Center MCP | Authorization Request</title>
+    <script>
+      function initColorScheme() {
+        const colorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light"
+        document.documentElement.setAttribute("data-color-mode", colorScheme)
+
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (e) => {
+            document.documentElement.setAttribute(
+              "data-color-mode",
+              e.matches ? "dark" : "light"
+            )
+          })
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="node_modules/@planningcenter/tapestry/dist/index.css"
+    />
+    <link rel="stylesheet" href="css/svg-paths.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <header>
+        <div class="svg svg--planningcenter"></div>
+      </header>
+      <div class="card--content">
+        <div class="alert alert--warning">
+          <div class="alert--icon svg--shield"></div>
+          <div class="alert--content">
+            <p class="fw-600">Review before continuing</p>
+            <p>
+              You are about to authenticate with Planning Center to authorize an
+              MCP client. Please review the details below carefully.
+            </p>
+          </div>
+        </div>
+        <h1 class="fs-xl fw-500">Authorization request</h1>
+        <p class="fs-md fw-500">MCP Inspector</p>
+        <p>
+          This client is requesting authorization to interact with your Planning
+          Center data through Planning Center's MCP server.
+        </p>
+        <div class="alert alert--neutral alert--sm">
+          <div class="alert--content">
+            <p class="fw-600">Redirect URI:</p>
+            <p><a href="#">http://localhost:6274/oauth/callback/debug</a></p>
+          </div>
+        </div>
+        <h2 class="fs-xl fw-500">Important information</h2>
+        <ul>
+          <li>You will be redirected to Planning Center to authenticate</li>
+          <li>
+            Once authorized, MCP Inspector will be able to access Planning
+            Center People data on your behalf.
+          </li>
+          <li>
+            Please note: Large language models can hallucinate or produce
+            inaccurate information. Always verify all important data.
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <div class="footer--buttons">
+          <a href="#" class="button button--secondary">Deny</a>
+          <a href="#" class="button button--primary">
+            Continue to Planning Center
+          </a>
+        </div>
+        <div class="footer-logo">
+          <p>Powered by:</p>
+          <div class="svg svg--picolabs"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
