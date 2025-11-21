@@ -1,0 +1,8 @@
+{
+  "name": "mcp-ui",
+  "version": "0.0.1",
+  "description": "Planning Center MCP Authorization UI",
+  "dependencies": {
+    "@planningcenter/tapestry": "^2.6.0"
+  }
+}
