@@ -127,8 +127,8 @@ ul li:not(:last-child) {
   }
 
   a:focus-visible {
-    outline: 2px solid var(--t-text-color-interaction-primary);
-    outline-offset: 2px;
+    outline: solid 3px var(--t-border-color-status-info);
+    outline-offset: 1px;
     border-radius: var(--t-border-radius-md);
   }
 
